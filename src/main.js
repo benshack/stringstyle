@@ -90,7 +90,6 @@ class StringStyleObj {
 // Listeners
 const initListeners = () => {
   window.addEventListener('resize', () => {
-    wWidth = window.innerWidth;
     wHeight = window.innerHeight;
     playVisible();
   })
