@@ -3,9 +3,9 @@ import babel from 'rollup-plugin-babel';
 import {uglify} from 'rollup-plugin-uglify';
 
 export default {
-  input: 'src/main.js',
+  input: 'src/index.js',
   output: {
-    file: 'dist/main.js',
+    file: 'dist/stringstyle.js',
     format: 'cjs'
   },
   plugins: [

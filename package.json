@@ -2,9 +2,10 @@
   "name": "benshack-stringstyle",
   "version": "1.0.0",
   "description": "A simple ES6 string class wrapper loop",
-  "main": "dist/stringstyle.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "rollup -c",
+    "start": "rollup --watch --config rollup.config.standalone.js",
     "prepublish": "npm run build"
   },
   "author": {

@@ -7,7 +7,7 @@ const defaultOptions = {
   wrapperClass: 'stringStyleWrapper',
   beforeClass: 'stringStyleBefore', // or an array of random classes
   afterClass: 'stringStyleAfter', // or an array of random classes
-  stripStyles: false,
+  stripStylesAfter: false, // int. replaces original string after completing.
 }
 
 // Shared Variables
@@ -57,7 +57,9 @@ class StringStyleObj {
 
     if (this.index >= this.targets.length) {
       this.complete = true;
-      if (this.options.stripStyles) this.stripStyles();
+      if (this.options.stripStylesAfter) setTimeout(() => {
+        this.stripStyles()
+      }, this.options.stripStylesAfter);
     }
 
     if (!this.complete) {
@@ -83,8 +85,6 @@ class StringStyleObj {
     const rect = this.elem.getBoundingClientRect();
     return rect.top < wHeight && rect.bottom > 0;
   }
-
-
 }
 
 // Listeners
